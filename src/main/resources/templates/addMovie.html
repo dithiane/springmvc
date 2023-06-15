@@ -1,0 +1,28 @@
+
+<!--The addMovie.html file is a Thymeleaf template that displays a form for adding a movie.-->
+
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+  <title>Add a movie</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form action="addMovie" method="POST">
+  <!-- Create a label and input field for the movie title. -->
+  <p>Movie Title: <label>
+    <input type="text" name="movieTitle" />
+  </label></p>
+  <!-- Create an input field for the maturity rating. -->
+  <p>Maturity Rating: <input type="text" name="maturityRating" /></p>
+  <!-- Create a label and input field for the genre. -->
+  <p>Genre: <label>
+    <input type="text" name="genre" />
+  </label></p>
+  <!-- Create a submit button. -->
+  <p><input type="submit" value="Submit" /></p>
+</form>
+<!-- Create a link to the home page. -->
+<a href="/">Home</a>
+</body>
+</html>

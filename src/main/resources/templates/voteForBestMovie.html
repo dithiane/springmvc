@@ -1,0 +1,32 @@
+
+<!--The voteForBestMovie.html file is a Thymeleaf template that displays a form for voting for the best movie.-->
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Vote For Best Movie</title>
+</head>
+<body>
+<!-- Add a link to the home page. -->
+<a href="/">Home</a>
+<!-- Create a form that performs a GET request on the path “voteForBestMovie”. -->
+<form action="voteForBestMovie" method="PUT">
+    <!-- Create a label and input field for the voter's name. -->
+    <p>Your Name: <label>
+        <input type="text" name="voterName">
+    </label></p>
+    <!-- Create a dropdown list of movies. -->
+    <label>
+        <select name="movieId">
+            <option value="0">select movie</option>
+            <!-- Use Thymeleaf to iterate over the list of movies and add an option for each one. -->
+            <option th:each="movie : ${movies}" th:value="${movie.id}" th:text="${movie.title}"></option>
+        </select>
+    </label>
+    <!-- Create a submit button. -->
+    <p><input type="submit" value="Submit"></p>
+</form>
+</body>
+</html>

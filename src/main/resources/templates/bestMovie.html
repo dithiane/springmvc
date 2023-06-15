@@ -1,0 +1,18 @@
+
+<!--The bestMovie.html file is a Thymeleaf template that displays the best movie based on the number of votes.-->
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+  <title>The Best Movie</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>The Best Movie</title>
+</head>
+<body>
+<!-- Display the best movie and the number of voters. -->
+<p th:text="'The best movie is: ' + ${bestMovie}"></p>
+<p th:text="'Voters: ' + ${bestMovieVoters}"></p>
+<!-- Add a link to let users navigate to the index page by clicking a link named “Home”. -->
+<a href="/">Home</a>
+</body>
+</html>
